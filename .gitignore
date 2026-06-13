@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Builds
+frontend/dist/
+remotion/out/
+*.tsbuildinfo
+
+# Runtime data
+storage/
+*.log
+.env
+.env.local
+studio_settings.json
+
+# Model caches (downloaded weights only — NOT backend/app/models source)
+/models/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Motionshot design tokens (see docs/04-ui-design.md). Premium dark studio. */
+@theme {
+  --color-base: #0b0d10;
+  --color-panel: #14171c;
+  --color-elev: #1c2027;
+  --color-line: #272c34;
+  --color-ink: #e8ebf0;
+  --color-ink-dim: #9aa3b2;
+  --color-accent: #6e8bff;
+  --color-accent-hi: #8aa1ff;
+  --color-beat: #3ddc97;
+  --color-warn: #ffb454;
+  --color-gold: #fcd34d;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-panel: 12px;
+  --radius-control: 8px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* Thin, unobtrusive scrollbars for the pro panels. */
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2c323b;
+  border-radius: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer utilities {
+  .panel {
+    background: var(--color-panel);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-panel);
+  }
+  .ctl {
+    background: var(--color-elev);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-control);
+  }
+  .accent-glow {
+    box-shadow: 0 0 0 1px var(--color-accent), 0 0 20px -6px var(--color-accent);
+  }
+}
